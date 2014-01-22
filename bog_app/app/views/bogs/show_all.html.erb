@@ -1,0 +1,9 @@
+		<div>
+		  <% @creatures.each do |creature| %>
+            Name:  <%= creature[:name] %> <br>
+            Description: <%= creature[:description] %> <br>
+            <a href="<%= creature[:id] %>/edit"> Edit Creature </a><br>
+            <a href="<%= creature[:id] %>/delete"> Delete Creature </a></br>
+            <br>
+        </div>
+        <% end %>

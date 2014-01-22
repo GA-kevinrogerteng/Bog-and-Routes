@@ -1,0 +1,9 @@
+<form action="/bogs/<%= @creature.id%>" method="post">
+	<!-- because you cannot use put as it does not exist as an HTTP verb in a browser. So, you need to hack it by creating a form field with the value of put. Rails understands this as puts. -->
+		<input type="hidden" name="_method" value="put">
+        Name: <input type="text" name="creature[name]" value="<%= @creature.name%>" ><br>
+        Description: <textarea name="creature[description]"><%= @creature.description %></textarea><br>
+        <%= token_tag form_authenticity_token %>
+        
+        <button> Update </button><br>
+</form>

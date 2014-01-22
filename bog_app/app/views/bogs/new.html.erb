@@ -1,0 +1,9 @@
+Kindly fill the form below:
+
+<form action="/bogs" method="post">
+        Creature Name: <input type="text" name="creature[name]"><br>
+        Creature Description: <textarea name="creature[description]"></textarea><br>
+        <%= token_tag form_authenticity_token %>
+        
+        <button> Submit </button><br>
+</form>
